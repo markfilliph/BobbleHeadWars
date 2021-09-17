@@ -840,6 +840,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1170308956}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1222458754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 49605af5dcf2a1348b3e7bd93b426b44,
+    type: 3}
+  m_PrefabInstance: {fileID: 1449219251}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1222458755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222458754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54433ddb4a058b94588ff01ef467bf8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4827116465759732951, guid: b761864eb62023c4d9f6714ecf399313,
+    type: 3}
+  launchPosition: {fileID: 1359181959}
 --- !u!1001 &1318973698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -915,6 +936,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1318973698}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1359181958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1359181959}
+  m_Layer: 0
+  m_Name: Launcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1359181959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359181958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1738296086}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1390000018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1245,6 +1296,12 @@ Transform:
   m_Father: {fileID: 523457111}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1738296086 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4427695919387890460, guid: 49605af5dcf2a1348b3e7bd93b426b44,
+    type: 3}
+  m_PrefabInstance: {fileID: 1449219251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1864343801
 GameObject:
   m_ObjectHideFlags: 0

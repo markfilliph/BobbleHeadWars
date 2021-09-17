@@ -10,16 +10,16 @@ public class CameraMovement : MonoBehaviour
 
     void Start()
     {
-        if (followTarget != null)
-        {
-            transform.position = Vector3.Lerp(transform.position,
-                followTarget.transform.position, Time.deltaTime * moveSpeed);
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (followTarget != null)
+        {
+            transform.position = Vector3.Lerp(transform.position,
+                followTarget.transform.position, Time.deltaTime * moveSpeed);
+        }
     }
 }
