@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 836373455033662738}
   - component: {fileID: 686620678045548066}
   - component: {fileID: -7935432609215290860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5223776316665017126}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.52
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  navigationUpdate: 0.5
 --- !u!1001 &5223776317341758018
 PrefabInstance:
   m_ObjectHideFlags: 0
