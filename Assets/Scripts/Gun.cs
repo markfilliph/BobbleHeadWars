@@ -8,9 +8,11 @@ public class Gun : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform launchPosition;
+    private AudioSource audioSource;
+
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     void fireBullet()
@@ -22,6 +24,8 @@ public class Gun : MonoBehaviour
         // 3
         bullet.GetComponent<Rigidbody>().velocity =
             transform.parent.forward * 100;
+
+        audioSource.PlayOneShot(SoundManager.Instance.gunFire);
     }
 
     // Update is called once per frame
