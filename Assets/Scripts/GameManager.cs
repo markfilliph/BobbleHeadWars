@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour {
     private float currentUpgradeTime = 0;
 
     // Use this for initialization
+
+    
     void Start ()
     {
         actualUpgradeTime = Random.Range(upgradeMaxTimeSpawn - 3.0f,
@@ -65,6 +67,11 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (player == null)
+        {
+            return;
+        }
+
         currentUpgradeTime += Time.deltaTime;
         if (currentUpgradeTime > actualUpgradeTime)
         {
