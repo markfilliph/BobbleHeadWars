@@ -11,17 +11,19 @@ public class PlayerController : MonoBehaviour
     public LayerMask layerMask;
     private Vector3 currentLookTarget = Vector3.zero;
     public Animator bodyAnimator;
-    public float[] hitForce;
-    public float timeBetweenHits = 2.5f;
-    private bool isHit = false;
-    private float timeSinceHit = 0;
-    private int hitNumber = -1;
-    public Rigidbody marineBody;
-    private bool isDead = false;
+    public float[] hitForce; // chapter 8
+    public float timeBetweenHits = 2.5f; // chapter 8
+    private bool isHit = false; // chapter 8
+    private float timeSinceHit = 0; // chapter 8
+    private int hitNumber = -1; // chapter 8
+    public Rigidbody marineBody; // chapter 8
+    private bool isDead = false;  // chapter 8
+    private DeathParticles deathParticles; // chapter 8 page 232
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        deathParticles = gameObject.GetComponentInChildren<DeathParticles>(); // chapter 8 page 232
     }
 
     // Update is called once per frame
@@ -36,7 +38,7 @@ public class PlayerController : MonoBehaviour
             0, Input.GetAxis("Vertical"));
         characterController.SimpleMove(moveDirection * moveSpeed);
 
-        if (isHit)
+        if (isHit) // chapter 8
         {
             timeSinceHit += Time.deltaTime;
             if (timeSinceHit > timeBetweenHits)
@@ -84,7 +86,7 @@ public class PlayerController : MonoBehaviour
             rotation, Time.deltaTime * 10.0f);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) // chapter 8
     {
         Alien alien = other.gameObject.GetComponent<Alien>();
         if (alien != null)
@@ -120,6 +122,7 @@ public class PlayerController : MonoBehaviour
         head.transform.parent = null;
         head.useGravity = true;
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.marineDeath);
+        deathParticles.Activate(); // chapter 8 page 232
         Destroy(gameObject);
     }
 

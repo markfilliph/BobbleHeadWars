@@ -53,10 +53,13 @@ public class GameManager : MonoBehaviour {
     private bool spawnedUpgrade = false;
     private float actualUpgradeTime = 0;
     private float currentUpgradeTime = 0;
+    public GameObject deathFloor; // chapter 8 - page 231
+
+    public Animator arenaAnimator; // chapter 8 page 237
 
     // Use this for initialization
 
-    
+
     void Start ()
     {
         actualUpgradeTime = Random.Range(upgradeMaxTimeSpawn - 3.0f,
@@ -127,15 +130,27 @@ public class GameManager : MonoBehaviour {
                         alienScript.target = player.transform;
                         Vector3 targetRotation = new Vector3(player.transform.position.x, newAlien.transform.position.y, player.transform.position.z);
                         newAlien.transform.LookAt(targetRotation);
-                        alienScript.OnDestroy.AddListener(AlienDestroyed);
+                        alienScript.OnDestroy.AddListener(AlienDestroyed); // chapter 8 - page 213
+                        alienScript.GetDeathParticles().SetDeathFloor(deathFloor);
                     }
                 }
             }
         }
     }
-    public void AlienDestroyed()
+    public void AlienDestroyed() // chapter 8 - page 212
     {
         aliensOnScreen -= 1;
         totalAliens -= 1;
+        if (totalAliens == 0) // chapter 8 page 237
+        {
+            Invoke("endGame", 2.0f);
+        }
+    }
+
+    private void endGame() // chapter 8 page 237
+    {
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.
+            elevatorArrived);
+        arenaAnimator.SetTrigger("PlayerWon");
     }
 }

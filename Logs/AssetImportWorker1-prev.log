@@ -9,13 +9,25 @@ C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker2
+AssetImportWorker1
 -projectPath
 C:/game312-lab1-BobbleHead_Wars
 -logFile
-Logs/AssetImportWorker2.log
+Logs/AssetImportWorker1.log
 -srvPort
 51586
 Successfully changed project path to: C:/game312-lab1-BobbleHead_Wars
 C:/game312-lab1-BobbleHead_Wars
 Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 1160.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.17f1 (a4537701e4ab)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/game312-lab1-BobbleHead_Wars/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 7570M (ID=0x6841)
+    Vendor:   
+    VRAM:     1004 MB
+    Driver:   15.201.1101.0
